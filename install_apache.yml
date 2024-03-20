@@ -1,0 +1,8 @@
+- name: My first play
+  hosts: myhosts
+  tasks:
+    - name: Install apache2 if not installed
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+

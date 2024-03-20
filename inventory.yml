@@ -1,0 +1,14 @@
+myhosts:
+  hosts:
+    my_host_01:
+      ansible_host: localhost
+      ansible_port: 2200
+    my_host_02:
+      ansible_host: localhost
+      ansible_port: 2222
+    my_host_03:
+      ansible_host: localhost
+      ansible_port: 2223
+  vars:
+    ansible_user: root
+  

@@ -1,0 +1,7 @@
+- name: remove vim-nox
+  hosts: all
+  tasks:
+   - name: remove vim-nox
+     ansible.builtin.apt:
+      name: vim-nox
+      state: absent
