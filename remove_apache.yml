@@ -5,3 +5,8 @@
      ansible.builtin.apt:
       name: apache2
       state: absent
+
+   - name: Remove apache service
+     ansible.builtin.service:
+      name: apache2
+      state: stopped
