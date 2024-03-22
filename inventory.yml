@@ -2,13 +2,17 @@ myhosts:
   hosts:
     my_host_01:
       ansible_host: localhost
-      ansible_port: 2200
+      ansible_port: 2220
+      # variable to be used in playbooks, like {{ administrator_name }}. also useful to provide package name for each distro. 
+      administrator_name: hector
     my_host_02:
       ansible_host: localhost
-      ansible_port: 2222
+      ansible_port: 2221
+      administrator_name: mateo
     my_host_03:
       ansible_host: localhost
-      ansible_port: 2223
+      ansible_port: 2222
+      administrator_name: mateo
   vars:
     ansible_user: root
   

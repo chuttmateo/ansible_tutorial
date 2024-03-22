@@ -1,14 +1,13 @@
 - name: My first play
   hosts: myhosts
   tasks:
-    - name: Install apache2 if not installed
+    - name: Install apache2 and systemctl
       ansible.builtin.apt:
-        name: apache2
+        name:
+        - apache2
+        - systemctl
         state: present
-
-    - name: Install systemctl if not installed
-      ansible.builtin.apt:
-        name: systemctl
+        update_cache: yes
 
     - name: Start apache service
       ansible.builtin.service:

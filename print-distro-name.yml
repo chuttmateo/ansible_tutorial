@@ -1,0 +1,15 @@
+- name: Print hello from ubuntu
+  hosts: all
+  tasks:
+   - name: Print hello from ubuntu
+     debug:
+      msg: "Hello from ubuntu"
+     when: ansible_distribution == 'Ubuntu'
+
+- name: Print hello from debian
+  hosts: all
+  tasks:
+   - name: Print hello from debian
+     debug:
+      msg: "Hello from debian"
+     when: ansible_distribution == 'Debian'

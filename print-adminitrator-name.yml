@@ -1,0 +1,6 @@
+- name: Print administrator name
+  hosts: all
+  tasks:
+   - name: Print administrator name
+     debug:
+      msg: "Hello {{ administrator_name }}"
