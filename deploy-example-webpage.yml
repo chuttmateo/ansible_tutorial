@@ -1,0 +1,23 @@
+- name: Site a Web Page in debian machines.
+  hosts: web 
+  tasks:
+   - name: Install apache2
+     ansible.builtin.apt:
+      name:
+      - apache2
+      state: present
+      update_cache: yes
+
+   - name: Copy web page from web/ to /var/www/html
+     ansible.builtin.copy:
+      src: web/
+      dest: /var/www/html
+      owner: root
+      group: root
+      mode: 0644
+
+   - name: Start apache service
+     ansible.builtin.service:
+      name: apache2
+      state: started
+      enabled: yes

@@ -1,0 +1,10 @@
+- name: copy a web page
+  hosts: all
+  tasks:
+  - name: copy a web page to /var/www/html
+    copy:
+      src: web/
+      dest: /var/www/html/
+      owner: root
+      group: root
+      mode: 0644
